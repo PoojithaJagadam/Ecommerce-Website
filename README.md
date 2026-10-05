@@ -36,8 +36,8 @@ Customer reviews and product ratings are managed and displayed using the Helpful
 To get started, clone the repository and install the dependencies:
 
 ```bash
-git clone <REPOSITORY_URL>
-cd earthlifeco
+git clone https://github.com/NitinKatiyar496/EarthlifeCo.-Build-Code.git
+cd EarthlifeCo.-Build-Code
 npm install
 ```
 
@@ -67,8 +67,12 @@ npm run build
 ```
 
 ## Deployment Notes (Hostinger)
-When deploying the application to Hostinger (or similar hosting providers):
-1. Run the production build command (`npm run build`).
-2. Upload the contents of the `dist` directory to your `public_html` or configured document root on Hostinger.
-3. If using client-side routing, ensure that the server is configured to fallback to `index.html` for all unknown routes (e.g., using an `.htaccess` file).
-4. Configure the necessary environment variables securely within the Hostinger deployment environment or control panel.
+When deploying the application to Hostinger, follow these instructions:
+- Deploy the application as a Node.js/Express web application on Hostinger.
+- Connect the Hostinger Web App to the GitHub repository.
+- Use the project's production build command: `npm run build`.
+- Configure the required environment variables securely in Hostinger; never commit real secrets.
+- For the production same-domain setup, use `VITE_API_BASE_URL=""` so frontend API requests use the same domain.
+- Configure the Node.js application using the start command defined by the project/package.json and the Hostinger Node.js deployment settings.
+- Attach the production domain `earthlifeco.com` to the deployed application.
+- After deployment, verify the live site, frontend routes, API requests, Ecwid cart/account/checkout flows, Razorpay checkout, order confirmation, and customer-facing email/order links.
