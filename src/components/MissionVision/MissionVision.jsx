@@ -1,7 +1,7 @@
 import React from 'react';
 import { Leaf } from 'lucide-react';
 import Container from '../UI/Container/Container';
-import GlowingEffect from '../ui/glowing-effect';
+import GlowingEffect from '../UI/glowing-effect';
 import './MissionVision.css';
 
 const MissionVision = () => {
