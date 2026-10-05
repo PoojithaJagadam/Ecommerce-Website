@@ -151,8 +151,9 @@ async function startServer() {
     app.use(vite.middlewares);
   }
 
-  server.listen(3000, '0.0.0.0', () => {
-    console.log('EarthLife Co. Backend running on port 3000');
+  const port = process.env.PORT ? parseInt(process.env.PORT as string, 10) : 3000;
+  server.listen(port, '0.0.0.0', () => {
+    console.log(`EarthLife Co. Backend running on port ${port}`);
   });
 }
 
