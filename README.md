@@ -67,9 +67,11 @@ npm run build
 ```
 
 ## Deployment Notes (Hostinger)
-When deploying the application to Hostinger, follow these instructions:
+
+The application is currently deployed on Hostinger as a Node.js/Express web application using a manually uploaded ZIP file.
+
 - Deploy the application as a Node.js/Express web application on Hostinger.
-- Connect the Hostinger Web App to the GitHub repository.
+- Upload the production application ZIP file through the Hostinger Node.js deployment flow.
 - Use the project's production build command: `npm run build`.
 - Configure the required environment variables securely in Hostinger; never commit real secrets.
 - For the production same-domain setup, use `VITE_API_BASE_URL=""` so frontend API requests use the same domain.
